@@ -9,7 +9,7 @@ namespace FourPlayerTraining.Patches
     [HarmonyPatch(typeof(SetCharacterSelectMode), "SetModeObjects")]
     internal class SetCharacterSelectMode_SetModeObjects
     {
-        static bool Prefix(CharacterSelectScreen.Mode currentMode, ref GameObject[] ___localBattleObjects)
+        private static bool Prefix(CharacterSelectScreen.Mode currentMode, ref GameObject[] ___localBattleObjects)
         {
             if (currentMode == CharacterSelectScreen.Mode.Training)
             {

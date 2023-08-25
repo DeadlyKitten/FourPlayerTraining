@@ -7,7 +7,7 @@ namespace FourPlayerTraining.Patches
     [HarmonyPatch(typeof(TrainingUI), "ClickedResetPos")]
     internal class TrainingUI_ClickedResetPos
     {
-        private bool Prefix(ref GameInstance ___context)
+        private static bool Prefix(ref GameInstance ___context)
         {
             var agents = new List<(int index,GameAgent agent)>();
 

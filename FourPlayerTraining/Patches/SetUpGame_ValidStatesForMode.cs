@@ -6,7 +6,7 @@ namespace FourPlayerTraining.Patches
     [HarmonyPatch(typeof(SetUpGame), "ValidStatesForMode")]
     internal class SetUpGame_ValidStatesForMode
     {
-        static void Postfix(CharacterSelectScreen.Mode mode, ref PlayerSlotContainer.State[] __result)
+        private static void Postfix(CharacterSelectScreen.Mode mode, ref PlayerSlotContainer.State[] __result)
         {
             if (mode == CharacterSelectScreen.Mode.Training)
             {

@@ -11,10 +11,13 @@ namespace FourPlayerTraining.Patches
     {
         static IEnumerable<CodeInstruction> Transpiler(IEnumerable<CodeInstruction> instructions)
         {
-            var instruction = instructions.Last((x) => x.opcode == OpCodes.Br_S);
+            var instruction = instructions.LastOrDefault((x) => x.opcode == OpCodes.Br);
 
+            if (instruction != null)
+            {
             instruction.opcode = OpCodes.Nop;
             instruction.operand = null;
+            }
 
             return instructions;
         }

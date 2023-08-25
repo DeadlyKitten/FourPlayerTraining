@@ -3,7 +3,7 @@ using HarmonyLib;
 
 namespace FourPlayerTraining
 {
-    [BepInPlugin("com.steven.nasb.4ptraining", "Four Player Training", "1.0.0")]
+    [BepInPlugin("com.steven.nasb.4ptraining", "Four Player Training", "1.1.0")]
     public class FourPlayerTrainingPlugin : BaseUnityPlugin
     {
         private void Awake()
